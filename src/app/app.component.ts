@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export default class AppComponent implements OnInit {
   title = 'my-app';
   users: any;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   ngOnInit(): void {
-    this.http.get(`http://172.20.10.12:5067/api/User`).subscribe({
+    this.http.get(`http://localhost:5067/api/User`).subscribe({
       next: response => this.users = response,
       error: error => console.log(error),
       complete: () => console.log('Request has completed'),
