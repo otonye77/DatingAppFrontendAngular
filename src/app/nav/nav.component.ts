@@ -22,7 +22,6 @@ export class NavComponent {
       next: response => {
         this.router.navigateByUrl("/members")
       },
-      error: error => this.toastr.error(error.error)
     })
   }
   logout() {
